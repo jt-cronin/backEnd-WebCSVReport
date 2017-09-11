@@ -81,6 +81,4 @@ TESTS
 	Takes the given strings and puts it into a text or csv file.
 If i have a addToCSV function and I pass it a string,
 	That string will be added to a file
-
-
 ___________________________________________
