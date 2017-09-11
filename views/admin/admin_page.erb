@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Page</title>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+</head>
+<body>
+<%= loginBar %>
+        <h1>Welcome Admin!</h1>
+        <p>Here you have many priviledges.</p>
+
+
+        <h2>
+        <form method="POST" action="/add_row">
+          <fieldset>
+            Name: <br>
+            <input type="text" name="Account" placeholder="Account Name"><br>
+            Date(M/D/YYYY): <br>
+            <input type="text" name="Date" placeholder="M/D/YYYY"><br>
+            Payee: <br>
+            <input type="text" name="Payee" placeholder="Payee"><br>
+            Category: <br>
+            <input type="text" name="Category" placeholder="Category"><br>
+            Outflow: <br>
+            <input type="text" name="Outflow" placeholder="0 if none"><br>
+            Inflow: <br>
+            <input type="text" name="Inflow" placeholder="0 if none"><br>
+            <input type="submit" value="Submit">
+          </fieldset>
+        </form>
+        </h2>
+
+
+</body>
+</html>

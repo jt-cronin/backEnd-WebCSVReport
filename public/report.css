@@ -1,0 +1,23 @@
+body {background-color: #66ccff}
+
+table, th, td {
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+th{
+	font-size:2em;
+}
+a:active, a:link, a:visited{
+	color: black;
+	background-color: white;
+	padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover{
+	color: hotpink;
+	background-color: #8000ff;
+	}

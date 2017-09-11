@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="report.css">
+
+  <title></title>
+</head>
+<body>
+<%= loginBar %>
+
+
+
+
+<h1>View Report</h1>
+
+<a href="/">Homepage</a>
+
+<hr>
+
+  <% if params[:report] == "full"
+
+    showReport.each do |name, info| %>    
+      <h1>Account: <%= name %>... Balance: $<%= info[:tally].round(2) %></h1>
+        <table >
+        <th> Category </th> 
+        <th> Total Spent </th>
+        <th> Average Transaction</th>
+        <% info[:categories].each do |category, c_info| %>
+          <tr> 
+            <td> <%= category %> </td>
+            <td>$<%= c_info[:tally].round(2) %></td>
+            <td> $<%= c_info[:average_transaction_cost].round(2) %></td>
+          </tr>
+      <% end %>
+      </table>
+    <% end 
+  else
+    
+    showSpecific(params[:report]).each do |name, info| %>   
+      <h1>Account: <%= name %>... Balance: $<%= info[:tally].round(2) %></h1>
+        <table >
+        <th> Category </th> 
+        <th> Total Spent </th>
+        <th> Average Transaction</th>
+        <% info[:categories].each do |category, c_info| %>
+          <tr> 
+            <td> <%= category %> </td>
+            <td>$<%= c_info[:tally].round(2) %></td>
+            <td> $<%= c_info[:average_transaction_cost].round(2) %></td>
+          </tr>
+        <% end %>
+      </table>
+    <% end 
+  end %>
+
+</body>
+</html>
+
+
+

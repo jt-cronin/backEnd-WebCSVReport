@@ -1,0 +1,86 @@
+TESTS
+
+TEST DATA
+Account,Date,Payee,Category,Outflow,Inflow
+JT,1/1/2017,Loan,Loan,$0.00,$5000.00
+JT,1/19/2017,Target,Fun,$23.00,$0.00
+JT,1/20/2017,Target,Work,$63.00,$0.00
+JT,1/11/2017,Target,School,$33.00,$0.00
+JT,2/23/2017,Target,Fun,$25.00,$0.00
+John,1/1/2017,Loan,Loan,$0.00,$5000.00
+John,3/4/2005,Target,Work,$29.00,$0.00
+John,3/4/2005,Target,School,$234.00,$0.00
+John,3/8/2005,Target,Fun,$246.00,$0.00
+John,3/4/2005,Target,Work,$278.00,$0.00
+Thomas,1/1/2017,Loan,Loan,$0.00,$5000.00
+Thomas,3/4/2005,Target,School,$97.00,$0.00
+Thomas,5/4/2005,Target,Fun,$33.00,$0.00
+Thomas,3/4/2005,TargetWork,$13.00,$0.00
+Thomas,3/4/2005,Target,School,$34.00,$0.00
+
+LOGINS
+ID,PSWD
+admin,admin
+
+
+
+
+
+LOGIN works...
+	Given pre determined key value pair(login ID and password)
+	Want to make sure it is accepted as a true value
+
+
+~ If I pass a checkLogin function two string values...
+	If the two values match the set of predetermined criteria, then I should return true.
+	If the two values do not match the set of predetermined criteria then I should return false.
+
+__________________________________________
+SET THE SESSION ID
+
+~ If i set the session ID equal to the name of the account
+	The session ID should equal the name of the account
+
+
+__________________________________________
+LOGOUT
+~If I have a logout function and I pass it a boolean of true,
+	It takes a session ID that was previously an account name and sets it to null.
+
+__________________________________________
+SHOW CSV...
+~If I have a string of data, and pass it to the show CSV function
+	Then I should have that the string printed out.
+___________________________________________
+Convert for CSV...
+
+~If i have a standardWord function and I pass it a string,
+	Then I should get back a string with the first character capitalized.
+(Account, Payee, Category)
+
+~if i have a standardNum function and I pass it an integer,
+	I should get back a float from that number to two decimal places.
+(Inflow, Outflow)
+
+~if I have a combineString function and I pass it 6 variables,
+	I should have one string returned with everything seperated by a comma.
+
+
+Grabs the six inputs from the webpage when submit is clicked. Changes the outputs to be uniform with the csv file...
+	Account - first letter capitalized
+	Date - M/D/YYYY
+	Payee - whatever
+	Category - first letter capitalized
+	Outflow - $##.##
+	Inflow - $##.##
+Then makes sure that everything is seperated by a comma
+Account,Date,Payee,Category,Outflow,Inflow
+___________________________________________
+ADD to CSV...
+
+	Takes the given strings and puts it into a text or csv file.
+If i have a addToCSV function and I pass it a string,
+	That string will be added to a file
+
+
+___________________________________________

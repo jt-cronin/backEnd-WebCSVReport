@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+	<title>Access Denied</title>
+</head>
+<body>
+<%= loginBar %>
+
+
+        <h1> Access denied </h1> 
+        <p> Please log in to continue </p>
+
+
+<form method="POST" action="/login">
+<fieldset> 
+  Login: <input type="text" name="loginID"> 
+  Password: <input type="password" name="passwordInput">
+  <input type="submit" value="Login">
+</fieldset>
+</form>
+
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+	<title>New User Signup</title>
+</head>
+<body>
+<%= loginBar %>
+
+
+<h1>Create your new account</h1> 
+<p> Sign up below:</p>
+
+<form method="POST" action="/new_user">
+<fieldset> 
+  Login Name: <input type="text" name="newUserID"> 
+  Password: <input type="password" name="newUserPassword">
+  <input type="submit" value="Create Account">
+</fieldset>
+</form>
+<br>
+
+
+<a href="/login">Back to Log In</a>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+body{
+
+	background-color: #66ff99; 
+	font-family: monospace;
+}
+
+
+a:active, a:link, a:visited{
+	color: black;
+	background-color: white;
+	padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover{
+	color: hotpink;
+	background-color: #8000ff;
+}
+p.intro{
+	font-style: italic;
+}
+.loginMain{
+	margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    text-align: center;
+}
+
+#mainheader {
+	font-size: 4em;
+	font-family: monospace;
+}
+#reportOptions {
+	font-size:2em;
+}
+
+.login {
+	text-align: left;
+}
+.logout {
+	text-align: right;
+}
+
